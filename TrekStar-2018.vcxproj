@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{81EB4783-C09F-3D6D-999B-19FBB50E9829}</ProjectGuid>
+    <RootNamespace>TrekStar-2018</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>TrekStar-2018</PrimaryOutput>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>TrekStar-2018</PrimaryOutput>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">
+    <QtMsBuild>$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">TrekStar-2018</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">TrekStar-2018</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;"include";"src";"view";"C:\Qt\Qt5.2.0\5.2.0\msvc2010\include";"C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtWidgets";"C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtGui";"C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtANGLE";"C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtCore";"release";".";C:\Qt\Qt5.2.0\5.2.0\msvc2010\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -std=c++11 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_OPENGL_ES_2;QT_OPENGL_ES_2_ANGLE;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>qtmain.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;libEGL.lib;libGLESv2.lib;gdi32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\Qt\Qt5.2.0\5.2.0\msvc2010\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\TrekStar-2018.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_OPENGL_ES_2;QT_OPENGL_ES_2_ANGLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <QTDIR>C:\Qt\Qt5.2.0\5.2.0\msvc2010</QTDIR>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <Define>UNICODE;$(Platform);QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_OPENGL_ES_2;QT_OPENGL_ES_2_ANGLE;_MSC_VER=1600;_$(Platform)</Define>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+      <DynamicSource>output</DynamicSource>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;include;src;view;C:\Qt\Qt5.2.0\5.2.0\msvc2010\include;C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtWidgets;C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtGui;C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtANGLE;C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtCore;$(Configuration);.;C:\Qt\Qt5.2.0\5.2.0\msvc2010\mkspecs\$(Platform)-msvc2010</IncludePath>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>resources</InitFuncName>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+      <QTDIR>C:\Qt\Qt5.2.0\5.2.0\msvc2010</QTDIR>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <Compression>default</Compression>
+      <InputFile>%(FullPath)</InputFile>
+    </QtRcc>
+    <QtUic>
+      <QTDIR>C:\Qt\Qt5.2.0\5.2.0\msvc2010</QTDIR>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;"include";"src";"view";"C:\Qt\Qt5.2.0\5.2.0\msvc2010\include";"C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtWidgets";"C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtGui";"C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtANGLE";"C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtCore";"debug";".";C:\Qt\Qt5.2.0\5.2.0\msvc2010\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -std=c++11 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_OPENGL_ES_2;QT_OPENGL_ES_2_ANGLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>qtmaind.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;libEGLd.lib;libGLESv2d.lib;gdi32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;C:\Qt\Qt5.2.0\5.2.0\msvc2010\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\TrekStar-2018.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_OPENGL_ES_2;QT_OPENGL_ES_2_ANGLE;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtRcc>
+      <QTDIR>C:\Qt\Qt5.2.0\5.2.0\msvc2010</QTDIR>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <Compression>default</Compression>
+      <InitFuncName>resources</InitFuncName>
+      <OutputFile>.\GeneratedFiles\qrc_%(Filename).cpp</OutputFile>
+      <InputFile>%(FullPath)</InputFile>
+    </QtRcc>
+    <QtMoc>
+      <QTDIR>C:\Qt\Qt5.2.0\5.2.0\msvc2010</QTDIR>
+      <OutputFile>.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</OutputFile>
+      <Define>UNICODE;$(Platform);QT_WIDGETS_LIB;QT_GUI_LIB;QT_CORE_LIB;QT_OPENGL_ES_2;QT_OPENGL_ES_2_ANGLE;_MSC_VER=1600;_$(Platform)</Define>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+      <DynamicSource>output</DynamicSource>
+      <IncludePath>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;include;src;view;C:\Qt\Qt5.2.0\5.2.0\msvc2010\include;C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtWidgets;C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtGui;C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtANGLE;C:\Qt\Qt5.2.0\5.2.0\msvc2010\include\QtCore;$(Configuration);.;C:\Qt\Qt5.2.0\5.2.0\msvc2010\mkspecs\$(Platform)-msvc2010</IncludePath>
+    </QtMoc>
+    <QtUic>
+      <QTDIR>C:\Qt\Qt5.2.0\5.2.0\msvc2010</QTDIR>
+      <OutputFile>.\GeneratedFiles\ui_%(Filename).h</OutputFile>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <InputFile>%(FullPath)</InputFile>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\addmaterialsdialog.cpp" />
+    <ClCompile Include="src\enumerable_list.cpp" />
+    <ClCompile Include="src\film.cpp" />
+    <ClCompile Include="src\filmSort.cpp" />
+    <ClCompile Include="src\filmmaterials.cpp" />
+    <ClCompile Include="src\infocontainer.cpp" />
+    <ClCompile Include="src\linearlist.cpp" />
+    <ClCompile Include="src\logger.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\mainwindow.cpp" />
+    <ClCompile Include="src\mastercontroller.cpp" />
+    <ClCompile Include="src\popupdialog.cpp" />
+    <ClCompile Include="src\projcreationwindow.cpp" />
+    <ClCompile Include="src\store.cpp" />
+    <ClCompile Include="src\support.cpp" />
+    <ClCompile Include="src\viewprojectdialog.cpp" />
+    <ClCompile Include="src\viewprojectswindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="include\addmaterialsdialog.h">
+    </QtMoc>
+    <ClInclude Include="include\enumerable_list.h" />
+    <ClInclude Include="include\film.h" />
+    <ClInclude Include="include\filmSort.h" />
+    <ClInclude Include="include\filmmaterials.h" />
+    <ClInclude Include="include\infocontainer.h" />
+    <ClInclude Include="include\linearlist.h" />
+    <ClInclude Include="include\logger.h" />
+    <QtMoc Include="include\mainwindow.h">
+    </QtMoc>
+    <ClInclude Include="include\mastercontroller.h" />
+    <QtMoc Include="include\popupdialog.h">
+    </QtMoc>
+    <QtMoc Include="include\projcreationwindow.h">
+    </QtMoc>
+    <ClInclude Include="include\resource.h" />
+    <ClInclude Include="include\store.h" />
+    <ClInclude Include="include\support.h" />
+    <QtMoc Include="include\viewprojectdialog.h">
+    </QtMoc>
+    <QtMoc Include="include\viewprojectswindow.h">
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ui_addmaterialsdialog.h" />
+    <ClInclude Include="ui_mainwindow.h" />
+    <ClInclude Include="ui_popupdialog.h" />
+    <ClInclude Include="ui_projcreationwindow.h" />
+    <ClInclude Include="ui_viewprojectdialog.h" />
+    <ClInclude Include="ui_viewprojectswindow.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="view\addmaterialsdialog.ui">
+    </QtUic>
+    <QtUic Include="view\mainwindow.ui">
+    </QtUic>
+    <QtUic Include="view\popupdialog.ui">
+    </QtUic>
+    <QtUic Include="view\projcreationwindow.ui">
+    </QtUic>
+    <QtUic Include="view\viewprojectdialog.ui">
+    </QtUic>
+    <QtUic Include="view\viewprojectswindow.ui">
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\POSTERS\P1.png" />
+    <None Include="resources\POSTERS\P10.jpg" />
+    <None Include="resources\POSTERS\P11.jpg" />
+    <None Include="resources\POSTERS\P12.jpg" />
+    <None Include="resources\POSTERS\P13.jpg" />
+    <None Include="resources\POSTERS\P14.jpg" />
+    <None Include="resources\POSTERS\P15.jpg" />
+    <None Include="resources\POSTERS\P16.jpg" />
+    <None Include="resources\POSTERS\P17.jpg" />
+    <None Include="resources\POSTERS\P18.jpg" />
+    <None Include="resources\POSTERS\P19.jpg" />
+    <None Include="resources\POSTERS\P2.jpg" />
+    <None Include="resources\POSTERS\P20.jpg" />
+    <None Include="resources\POSTERS\P21.jpg" />
+    <None Include="resources\POSTERS\P22.jpg" />
+    <None Include="resources\POSTERS\P23.jpg" />
+    <None Include="resources\POSTERS\P24.jpg" />
+    <None Include="resources\POSTERS\P25.jpg" />
+    <None Include="resources\POSTERS\P26.jpg" />
+    <None Include="resources\POSTERS\P27.jpg" />
+    <None Include="resources\POSTERS\P28.jpg" />
+    <None Include="resources\POSTERS\P29.jpg" />
+    <None Include="resources\POSTERS\P3.jpg" />
+    <None Include="resources\POSTERS\P30.jpg" />
+    <None Include="resources\POSTERS\P4.jpg" />
+    <None Include="resources\POSTERS\P5.jpg" />
+    <None Include="resources\POSTERS\P6.jpg" />
+    <None Include="resources\POSTERS\P7.jpg" />
+    <None Include="resources\POSTERS\P8.jpg" />
+    <None Include="resources\POSTERS\P9.jpg" />
+    <None Include="resources\Images\TREKSTAR-LOGO.png" />
+    <None Include="resources\dataset\moviestestdata.txt" />
+    <QtRcc Include="resources.qrc">
+    </QtRcc>
+    <None Include="resources\Images\trek6.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" Qt5Version_x0020_Win32="msvc2010" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

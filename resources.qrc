@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>resources/Images/trek6.png</file>
+        <file>resources/Images/TREKSTAR-LOGO.png</file>
+    </qresource>
+    <qresource prefix="/Posters">
+        <file>resources/POSTERS/P1.png</file>
+        <file>resources/POSTERS/P2.jpg</file>
+        <file>resources/POSTERS/P3.jpg</file>
+        <file>resources/POSTERS/P4.jpg</file>
+        <file>resources/POSTERS/P5.jpg</file>
+        <file>resources/POSTERS/P6.jpg</file>
+        <file>resources/POSTERS/P7.jpg</file>
+        <file>resources/POSTERS/P8.jpg</file>
+        <file>resources/POSTERS/P9.jpg</file>
+        <file>resources/POSTERS/P10.jpg</file>
+        <file>resources/POSTERS/P11.jpg</file>
+        <file>resources/POSTERS/P12.jpg</file>
+        <file>resources/POSTERS/P13.jpg</file>
+        <file>resources/POSTERS/P14.jpg</file>
+        <file>resources/POSTERS/P15.jpg</file>
+        <file>resources/POSTERS/P16.jpg</file>
+        <file>resources/POSTERS/P17.jpg</file>
+        <file>resources/POSTERS/P18.jpg</file>
+        <file>resources/POSTERS/P19.jpg</file>
+        <file>resources/POSTERS/P20.jpg</file>
+        <file>resources/POSTERS/P21.jpg</file>
+        <file>resources/POSTERS/P22.jpg</file>
+        <file>resources/POSTERS/P23.jpg</file>
+        <file>resources/POSTERS/P24.jpg</file>
+        <file>resources/POSTERS/P25.jpg</file>
+        <file>resources/POSTERS/P26.jpg</file>
+        <file>resources/POSTERS/P27.jpg</file>
+        <file>resources/POSTERS/P28.jpg</file>
+        <file>resources/POSTERS/P29.jpg</file>
+        <file>resources/POSTERS/P30.jpg</file>
+    </qresource>
+    <qresource prefix="/dataset">
+        <file>resources/dataset/moviestestdata.txt</file>
+    </qresource>
+</RCC>
